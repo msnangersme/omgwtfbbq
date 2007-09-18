@@ -1,0 +1,12 @@
+AuthType Basic                                                                                            
+AuthName "Password Required"
+AuthUserFile /opt/passwords
+Require valid-user
+
+
+RewriteEngine On
+RewriteBase /myfeeds/
+
+RewriteCond $1 !^(index\.php|favicon\.ico|images/.+|media/.+|style\.css)
+RewriteRule ^(.*)$ index.php [L]
+
