@@ -21,6 +21,21 @@ Setup for the OMGWTFBBQ news reader.
 
 4) Edit the config.php to include the proper database params
 
+5) Use an .htaccess file and mod_rewrite to do something like the following, which will secure the site and route everything through index.php:
+
+	AuthType Basic                                                                                            
+	AuthName "Password Required"
+	AuthUserFile /opt/passwords
+	Require valid-user
+
+
+	RewriteEngine On
+	RewriteBase /myfeeds/
+
+	RewriteCond $1 !^(index\.php|favicon\.ico|images/.+|media/.+|style\.css)
+	RewriteRule ^(.*)$ index.php [L]
+
+
 
 Once you've tested the site and have added a few feeds, you can test the update.php PHP CLI script via the command line (it'll look like this:)
 
