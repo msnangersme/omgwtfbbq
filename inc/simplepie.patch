@@ -1,0 +1,43 @@
+--- simplepie.inc    (revision 528)
++++ simplepie.inc    (working copy)
+@@ -668,6 +668,12 @@
+                        $this->init();
+                }
+        }
++       function __destruct() {
++         if (isset($this->data['items']) && is_array($this->data['items'])) foreach (array_keys($this->data['items']) as $k) {
++            $this->data['items'][$k]->__destruct();
++            unset($this->data['items'][$k]);
++         }
++       }
+ 
+        /**
+         * Used for converting object to a string
+@@ -1521,6 +1527,7 @@
+                                                return false;
+                                        }
+                                }
++                               $locate->__destruct();
+                                $locate = null;
+ 
+                                $headers = $file->headers;
+@@ -2703,6 +2710,9 @@
+                $this->feed = $feed;
+                $this->data = $data;
+        }
++       function __destruct() {
++         unset($this->feed);
++       }
+ 
+        function __toString()
+        {
+@@ -10013,6 +10023,9 @@
+                $this->timeout = $timeout;
+                $this->max_checked_feeds = $max_checked_feeds;
+        }
++       function __destruct() {
++         unset($this->file);
++       }
+ 
+        function find($type = SIMPLEPIE_LOCATOR_ALL)
+        {
