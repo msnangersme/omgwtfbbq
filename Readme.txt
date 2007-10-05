@@ -6,7 +6,7 @@ Originally Published by Russell Beattie, http://www.russellbeattie.com
 
 Thanks to the hard work of the guys at Simplepie.org. 
 
-Thanks to Mike Rowehl (http://bitsplitter.net) for testing it out and giving me the name, and Diego Doval (http://diegodoval.com) for his input. 
+Thanks to Mike Rowehl (http://rowehl.com) for testing it out and giving me the name, and Diego Doval (http://diegodoval.com) for his input. 
 
 -----------------------------------------------
 
