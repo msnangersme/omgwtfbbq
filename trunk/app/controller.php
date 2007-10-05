@@ -7,7 +7,7 @@
 	
 	$uri = substr($_SERVER['REQUEST_URI'], strlen($site['base'])+1);
 
-	$page['name'] = str_replace('/','_',substr($uri, 0, (strpos($uri, '?') ? strpos($uri, '?') : strlen($uri))));
+	$page['name'] = str_replace('/','_',substr($uri, 0, (strpos($uri, '?') !== false ? strpos($uri, '?') : strlen($uri))));
 
 	if($page['name'] == ''){
 		$page['name'] = 'home';
