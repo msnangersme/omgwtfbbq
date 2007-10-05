@@ -19,7 +19,7 @@
 
 	error_reporting(E_ALL & ~E_NOTICE);
 	ini_set('display_errors', 1);
-	//ini_set('error_log', '/opt/www/error.log');
+	//ini_set('error_log', APP_PATH . '/log/error.log');
 	ini_set('log_errors',true);
 
 		
@@ -27,7 +27,6 @@
 // definitions and datetime
 
     date_default_timezone_set('America/Los_Angeles');
-    define('APP_PATH', realpath(dirname(__FILE__ ) . '/..'));
 
 // ---------------------------------------------
 // database
