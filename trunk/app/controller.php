@@ -1,6 +1,6 @@
 <?php
 
-	require APP_PATH . '/inc/config.php';
+	require 'app/inc/config.php';
 	
 	$page['template'] = 'template.php';
 	$page['title'] = '';
