@@ -27,6 +27,9 @@
 // definitions and datetime
 
     date_default_timezone_set('America/Los_Angeles');
+    
+	define('APP_PATH', realpath(dirname(__FILE__) . '/../'));
+    
 
 // ---------------------------------------------
 // database
