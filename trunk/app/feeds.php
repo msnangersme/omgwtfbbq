@@ -43,6 +43,11 @@
 	echo '</ul>' . "\n";
 
 ?>
+	<h3>OPML</h3>
+	<ul>
+	<li><a href="<?=$site['url']?>/opml">Public Only List</a></li>
+	<li><a href="<?=$site['url']?>/opml?all=true">Public and Private List</a></li>
+	</ul>
 	</div>
 
 </div>
